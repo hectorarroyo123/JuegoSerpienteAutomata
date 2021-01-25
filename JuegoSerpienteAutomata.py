@@ -39,7 +39,7 @@ while True:
 		while i<=(cordenaday-1):
 			i+=1		
 			os.system("cls")
-			print(j,i,cordenadax,cordenaday,"Puntos:   ",puntos)
+			print(j,i,cordenadax,cordenaday,"Puntos:  ",puntos)
 			acomodo()
 			matrix[j][i]="|>"
 			matrix[j][i-1]="| "
