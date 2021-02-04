@@ -9,7 +9,7 @@ def matriz():
 	for i in range(10):          
 		a =[]
 		for j in range(10):      
-			a.append("| ")
+			a.append(" ")
 		matrix.append(a)
 
 def acomodo():
@@ -25,14 +25,14 @@ i=0
 j=0
 cordenadax=0 
 cordenaday=0
-input("Bienvenido al juego de la serpiente automata, presione 'Enter' para empezar")
+
 while True:
 	
 	
 	if matrix[j][i]==matrix[cordenadax][cordenaday]:
 		cordenadax=random.randint(1,9)
 		cordenaday=random.randint(1,9)
-		matrix[cordenadax][cordenaday]="|O"
+		matrix[cordenadax][cordenaday]="O"
 		puntos+=1
 
 	if i<cordenaday:
@@ -40,9 +40,10 @@ while True:
 			i+=1		
 			os.system("cls")
 			print(j,i,cordenadax,cordenaday,"Puntos:  ",puntos)
-			acomodo()
-			matrix[j][i]="|>"
-			matrix[j][i-1]="| "
+			for x in range (puntos):
+				acomodo()
+				matrix[j][i]="►"
+				matrix[j][i-1]=" "
 			time.sleep(0.1)
 	elif j<cordenadax:			
 		while j<=(cordenadax-1):
@@ -50,8 +51,9 @@ while True:
 			os.system("cls")
 			print(j,i,cordenadax,cordenaday,"Puntos:   ",puntos)
 			acomodo()
-			matrix[j][i]="|>"
-			matrix[j-1][i]="| "
+			for x in range (puntos):
+				matrix[j][i]="▼"
+				matrix[j-1][i]=" "
 			time.sleep(0.1)
 
 	elif i>cordenaday:
@@ -60,8 +62,8 @@ while True:
 			os.system("cls")
 			print(j,i,cordenadax,cordenaday,"Puntos:   ",puntos)
 			acomodo()
-			matrix[j][i]="|<"
-			matrix[j][i+1]="| "
+			matrix[j][i]="◄"
+			matrix[j][i+1]=" "
 			time.sleep(0.1)
 	elif j>cordenadax:			
 		while j>=(cordenadax+1):
@@ -69,6 +71,6 @@ while True:
 			os.system("cls")
 			print(j,i,cordenadax,cordenaday,"Puntos:   ",puntos)
 			acomodo()				
-			matrix[j][i]="|<"
-			matrix[j+1][i]="| "
+			matrix[j][i]="▲"
+			matrix[j+1][i]=" "
 			time.sleep(0.1)
