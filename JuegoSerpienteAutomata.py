@@ -40,10 +40,9 @@ while True:
 			i+=1		
 			os.system("cls")
 			print(j,i,cordenadax,cordenaday,"Puntos:  ",puntos)
-			for x in range (puntos):
-				acomodo()
-				matrix[j][i]="►"
-				matrix[j][i-1]=" "
+			acomodo()
+			matrix[j][i]="►"
+			matrix[j][i-1]=" "
 			time.sleep(0.1)
 	elif j<cordenadax:			
 		while j<=(cordenadax-1):
@@ -51,9 +50,8 @@ while True:
 			os.system("cls")
 			print(j,i,cordenadax,cordenaday,"Puntos:   ",puntos)
 			acomodo()
-			for x in range (puntos):
-				matrix[j][i]="▼"
-				matrix[j-1][i]=" "
+			matrix[j][i]="▼"
+			matrix[j-1][i]=" "
 			time.sleep(0.1)
 
 	elif i>cordenaday:
